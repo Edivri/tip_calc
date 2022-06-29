@@ -18,7 +18,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: Scaffold(
       body: Center(
         child: Column(
@@ -38,7 +40,7 @@ class _MyAppState extends State<MyApp> {
               child: TextField(
                 controller: controller,
                 textAlign: TextAlign.center,
-                decoration: InputDecoration(hintText: '\$100.00'),
+                decoration: InputDecoration(hintText: '\₦100.00'),
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
             ),
@@ -52,7 +54,7 @@ class _MyAppState extends State<MyApp> {
             FlatButton(
                 onPressed: calculateTip,
                 child: Text('Calculate Tip'),
-                color: Colors.green,
+                color: Colors.teal,
                 textColor: Colors.white)
           ],
         ),
